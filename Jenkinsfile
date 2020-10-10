@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh(script: """
                     # Start app line missing! 
-                    ./scripts/test_container.ps1
+                    ./scripts/test_container.sh
                 """)
             }
             post {
@@ -40,7 +40,7 @@ pipeline {
         stage ('Run Tests'){
             steps {
                 sh(script: """
-                    pytest. /tests/test_sample.py
+                    pytest ./tests/test_sample.py
                 """)
             }
         }
